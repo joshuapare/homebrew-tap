@@ -10,7 +10,7 @@ class Lockstep < Formula
 
   on_macos do
     url "https://github.com/joshuapare/lockstep/releases/download/v0.0.4/lockstep-cli_0.0.4_darwin_all.tar.gz"
-    sha256 "acf0ae29eb893ae4e74f0180908a9e925a94ce10926ba60dea3027c74011cb5f"
+    sha256 "0278322ae25edc5df80423aad55f3be813378c940003557678561b348b833060"
 
     def install
       bin.install "credctl"
@@ -20,14 +20,14 @@ class Lockstep < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/joshuapare/lockstep/releases/download/v0.0.4/lockstep-cli_0.0.4_linux_amd64.tar.gz"
-      sha256 "a28cdfbf715d412a7d18822c7ffbe7688bd0c3659f7e274751c144a35631b613"
+      sha256 "89960e05aa49ec56e18e4b32f87ca50da9b203ff58f52e4addbd1eb4c8a526e9"
       def install
         bin.install "credctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/joshuapare/lockstep/releases/download/v0.0.4/lockstep-cli_0.0.4_linux_arm64.tar.gz"
-      sha256 "735391ad978071299834de975e4d2ec6749ff3f318159f5848f382bb275a6b3e"
+      sha256 "c423d7b285ee830a76b16a67c4d52ab3797dd5753e57b9149140f74a3f376d8e"
       def install
         bin.install "credctl"
       end
