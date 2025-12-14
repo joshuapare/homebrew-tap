@@ -9,8 +9,8 @@ class Lockstep < Formula
   license "MIT"
 
   on_macos do
-    url "https://github.com/joshuapare/lockstep/releases/download/v0.0.4/lockstep-cli_0.0.4_darwin_all.tar.gz"
-    sha256 "0278322ae25edc5df80423aad55f3be813378c940003557678561b348b833060"
+    url "https://github.com/joshuapare/homebrew-tap/releases/download/lockstep-v0.0.4/lockstep-cli_0.0.4_darwin_all.tar.gz"
+    sha256 "926436583b567767fd976e419b0c34ba99fe370bf157fb837fcce23c65fa5acb"
 
     def install
       bin.install "credctl"
@@ -19,19 +19,26 @@ class Lockstep < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joshuapare/lockstep/releases/download/v0.0.4/lockstep-cli_0.0.4_linux_amd64.tar.gz"
-      sha256 "89960e05aa49ec56e18e4b32f87ca50da9b203ff58f52e4addbd1eb4c8a526e9"
+      url "https://github.com/joshuapare/homebrew-tap/releases/download/lockstep-v0.0.4/lockstep-cli_0.0.4_linux_amd64.tar.gz"
+      sha256 "3a996e6386ab4068e5806a6fe3b006c6fc138c2eaf9a45478f1f341220d92be4"
       def install
         bin.install "credctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joshuapare/lockstep/releases/download/v0.0.4/lockstep-cli_0.0.4_linux_arm64.tar.gz"
-      sha256 "c423d7b285ee830a76b16a67c4d52ab3797dd5753e57b9149140f74a3f376d8e"
+      url "https://github.com/joshuapare/homebrew-tap/releases/download/lockstep-v0.0.4/lockstep-cli_0.0.4_linux_arm64.tar.gz"
+      sha256 "a029cbc9d9fd355ee1311f9d3d0fdfd14ce63e2ded8bc6f9c12480e97b8cfd44"
       def install
         bin.install "credctl"
       end
     end
+  end
+
+  def caveats
+    <<~EOS
+      On macOS, use the cask instead for both CLI and desktop app:
+        brew install --cask joshuapare/tap/lockstep
+    EOS
   end
 
   test do
