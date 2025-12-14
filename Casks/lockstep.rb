@@ -1,6 +1,6 @@
 cask "lockstep" do
-  version "0.0.9"
-  sha256 "2c2db23ea794bf5c14033289cf65b0f772b5b87811caf452a85601a445e458e9"
+  version "0.0.10"
+  sha256 "3e33f3346b0b87a6dad4e7ecf77b10d7cfc8b0514349f9f7052d53d6a47f05b8"
 
   url "https://github.com/joshuapare/homebrew-tap/releases/download/lockstep-v#{version}/Lockstep-#{version}-macos-universal.dmg"
   name "Lockstep"
