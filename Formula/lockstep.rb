@@ -5,12 +5,12 @@
 class Lockstep < Formula
   desc "Secure credential management CLI for developers and teams"
   homepage "https://github.com/joshuapare/lockstep"
-  version "0.0.7"
+  version "0.0.8"
   license "MIT"
 
   on_macos do
-    url "https://github.com/joshuapare/homebrew-tap/releases/download/lockstep-v0.0.7/lockstep-cli_0.0.7_darwin_all.tar.gz"
-    sha256 "38bf29ab13219a2bd8e4bf246a82c19248a102b5a85304c561c2dfa3698d900e"
+    url "https://github.com/joshuapare/homebrew-tap/releases/download/lockstep-v0.0.8/lockstep-cli_0.0.8_darwin_all.tar.gz"
+    sha256 "86d34192798a259848e5e8db63c8928163e075407f52597a071dd196521e892e"
 
     def install
       bin.install "credctl"
@@ -19,15 +19,15 @@ class Lockstep < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joshuapare/homebrew-tap/releases/download/lockstep-v0.0.7/lockstep-cli_0.0.7_linux_amd64.tar.gz"
-      sha256 "c07eca07fc9511a7ab2ed319a9a0091d8402e6ac4f4005e8ba79312b3b535516"
+      url "https://github.com/joshuapare/homebrew-tap/releases/download/lockstep-v0.0.8/lockstep-cli_0.0.8_linux_amd64.tar.gz"
+      sha256 "71da349346780d884152c93dc6db102a4d589b3e4b538db878a01bb4747bb6cd"
       def install
         bin.install "credctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joshuapare/homebrew-tap/releases/download/lockstep-v0.0.7/lockstep-cli_0.0.7_linux_arm64.tar.gz"
-      sha256 "a0253a282ff7bc3bb8ebd976b19a0d424c0618962fdad1157e9a6d7925590d86"
+      url "https://github.com/joshuapare/homebrew-tap/releases/download/lockstep-v0.0.8/lockstep-cli_0.0.8_linux_arm64.tar.gz"
+      sha256 "9d43c6be6a8822e42ccba818089074a2bfce9a475dd7194f13cd544469b543a9"
       def install
         bin.install "credctl"
       end
